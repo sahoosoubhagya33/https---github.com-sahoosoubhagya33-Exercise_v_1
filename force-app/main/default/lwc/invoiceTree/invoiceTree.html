@@ -1,0 +1,14 @@
+<template>
+    <template if:true={error}>
+        <div class="slds-text-color_error">Error: {error.body.message}</div>
+    </template>
+
+    <template if:true={treeItems}>
+        <lightning-card title="Invoice Hierarchy" icon-name="standard:orders">
+            <lightning-tree
+                items={treeItems}
+                header="Invoices"
+            ></lightning-tree>
+        </lightning-card>
+    </template>
+</template>
